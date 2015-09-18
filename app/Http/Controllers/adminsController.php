@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use \Serverfireteam\Panel\CrudController;
-
+use Hash;
 use Illuminate\Http\Request;
 
 class adminsController extends CrudController{
@@ -21,8 +21,11 @@ class adminsController extends CrudController{
 			$this->filter->build();
 
 			$this->grid = \DataGrid::source($this->filter);
+			$this->grid->add('id', 'id');
+			$this->grid->add('first_name', 'first_name');
 			$this->grid->add('email', 'Email');
-			$this->grid->add('last_login', 'Ultimo Login');
+			$this->grid->add('created_at', 'Criado em:');
+			$this->grid->add('updated_at', 'Atualizado em:');
 			$this->addStylesToGrid();
 
       
@@ -34,17 +37,21 @@ class adminsController extends CrudController{
         
         parent::edit($entity);
 
-     
+		    \App\Admins::creating(function($data) {
+		        $data->password = Hash::make(\Request::input('password'));
+		    });
+	
 			$this->edit = \DataEdit::source(new \App\Admins());
 
-			$this->edit->label('Edit Category');
+			$this->edit->label('Editar Administradores');
 
-			$this->edit->add('email', 'Name', 'text');
-			
-			$this->edit->add('code', 'Code', 'text')->rule('required');
+			$this->edit->add('first_name', 'Name', 'text');
+		
+			$this->edit->add('email', 'email', 'text')->rule('required');
+
+			$this->edit->add('password', 'Senha', 'text')->rule('required');
 
 
-       
        
         return $this->returnEditView();
     }    
