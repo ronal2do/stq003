@@ -19,7 +19,7 @@ return array(
     'FirstName' => 'Nome',
     'LastName' => 'Sobrenome',
     'updateProfile' => 'Update Profile',
-    'currentPassword' => 'Current Senha',
+    'currentPassword' => 'Senha atual',
     'password' => 'Senha',
     'email'    => 'Email',
     'rePassword' => 'Re-digitar Senha',
