@@ -12,7 +12,7 @@ login
                     </div>
                     <div class="login-panel panel panel-default">
                         <div class="panel-heading">
-                            <h3 class="panel-title">Enter New Password</h3>
+                            <h3 class="panel-title">Enter nova senha</h3>
                         </div>
                         <div class="panel-body">
                             <div class="logo-holder">

@@ -32,6 +32,7 @@ class pessoasController extends CrudController{
 			$this->grid->add('tel-fixo', 'Telefone Fixo');
 			$this->grid->add('tel-celular', 'Telefone Celular');
 			$this->grid->add('rua', 'Logradouro');
+			$this->grid->add('numero', 'Numero');
 			$this->grid->add('complemento', 'Complemento');
 			$this->grid->add('bairro', 'bairro');
 			$this->grid->add('cidade', 'cidade');
@@ -59,6 +60,7 @@ class pessoasController extends CrudController{
 			$this->edit->add('tel-fixo', 'Telefone Fixo','text');
 			$this->edit->add('tel-celular', 'Telefone Celular','text');
 			$this->edit->add('rua', 'Logradouro','text');
+			$this->edit->add('numero', 'Numero','text');
 			$this->edit->add('complemento', 'Complemento','text');
 			$this->edit->add('bairro', 'bairro','text');
 			$this->edit->add('cidade', 'cidade','text');

@@ -10,7 +10,7 @@ dashboard
  /*--}}         
        
     <div class="loading">
-        <h1> LOADING </h1>
+        <h1> Carregando </h1>
         <div class="spinner">
           <div class="rect1"></div>
           <div class="rect2"></div>
@@ -55,7 +55,7 @@ dashboard
                                @if (in_array($value['url'], $urls))
                                 {{--*/ $model = "Serverfireteam\Panel\\".$value['url'] /*--}}
                                   <li >
-                                      <a  href="{{ url('panel/'.$value['url'].'/all') }}" class=" s-link {{ (Request::segment(2)==$value['url'])?'active':'' }}"><i class="fa fa-edit fa-fw"></i> {{{$value['display']}}}  </a>   <span class="badge pull-right">{!!$model::all()->count()!!}</span> <div class="items-bar"> <a href="{{ url('panel/'.$value['url'].'/edit') }}" class="ic-plus" title="Add"></a> <a  title="List" class="ic-lines" href="{{ url('panel/'.$value['url'].'/all') }}">  </a>  </div>    
+                                      <a  href="{{ url('panel/'.$value['url'].'/all') }}" class=" s-link {{ (Request::segment(2)==$value['url'])?'active':'' }}"><i class="fa fa-edit fa-fw"></i> {{{$value['display']}}}  </a>   <span class="badge pull-right">{!!$model::all()->count()!!}</span> <div class="items-bar"> <a href="{{ url('panel/'.$value['url'].'/edit') }}" class="ic-plus" title="Adicionar"></a> <a  title="List" class="ic-lines" href="{{ url('panel/'.$value['url'].'/all') }}">  </a>  </div>    
                                            
                                   </li>
                                @else
@@ -64,7 +64,7 @@ dashboard
                                 
                 {{--*/  $model = $appHelper->getNameSpace().$value['url'] /*--}}
              <li class="s-link {{ (Request::segment(2)==$value['url'])?'active':'' }}">
-                                      <a  href="{{ url('panel/'.$value['url'].'/all') }}" class="{{ (Request::segment(2)==$value['url'])?'active':'' }}"><i class="fa fa-edit fa-fw"></i> {{{$value['display']}}}  </a>   <span class="badge pull-right">{!!$model::all()->count()!!}</span> <div class="items-bar"> <a href="{{ url('panel/'.$value['url'].'/edit') }}" class="ic-plus" title="Add" ></a> <a  title="List" class="ic-lines" href="{{ url('panel/'.$value['url'].'/all') }}" >  </a>  </div>        
+                                      <a  href="{{ url('panel/'.$value['url'].'/all') }}" class="{{ (Request::segment(2)==$value['url'])?'active':'' }}"><i class="fa fa-edit fa-fw"></i> {{{$value['display']}}}  </a>   <span class="badge pull-right">{!!$model::all()->count()!!}</span> <div class="items-bar"> <a href="{{ url('panel/'.$value['url'].'/edit') }}" class="ic-plus" title="Adicionar" ></a> <a  title="List" class="ic-lines" href="{{ url('panel/'.$value['url'].'/all') }}" >  </a>  </div>        
                                   </li>
                                @endif
                                @endforeach
@@ -78,7 +78,7 @@ dashboard
             </div>
             <!-- /.navbar-static-side -->
         </nav>
-        <div class="powered-by"><a href="http://laravelpanel.com">Thank you for using LaravelPanel.</a></div> 
+        
         <div id="page-wrapper">
             
 
