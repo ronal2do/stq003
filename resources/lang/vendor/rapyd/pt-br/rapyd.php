@@ -19,7 +19,7 @@ return array(
     'err_unknown'=> 'Erro, registro não selecionado',
     'err_dup_pk' => 'Erro, chave primária duplicada',
     'conf_delete'=> 'Você tem certeza que deseja eliminar o registro?',
-    'empty_list' => 'No record is added !',
-    'help'       => 'Help',
-    'links_help' => "The 'Edit Links' form is used for adding a link in the sidebar menu of panel. The value of 'Display' field specifies the label of the link to be displayed in the menu and the value of 'Link' field specifies the name of the model."
+    'empty_list' => 'Sem dados!',
+    'help'       => 'Ajuda!!!',
+    'links_help' => "O formulário de ' Editar vínculos ' é usado para adicionar um link no menu lateral do painel . O valor do campo 'Monitor' especifica o rótulo do link a ser exibido no menu eo valor do campo ' Link' especifica o nome do modelo."
 );
