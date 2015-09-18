@@ -25,7 +25,7 @@ login
                                 <fieldset>
                                     <div class="form-group">
 					@if (\Config::get('panel.demo') == true)
-						<p><i>Demo Username: admin@change.me</i></p>
+						<p></p>
 					@endif
                                         <input class="form-control" placeholder="{{ \Lang::get('panel::fields.email') }}" name="email" type="text" autofocus>
                                     </div>
