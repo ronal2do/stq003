@@ -22,7 +22,7 @@ class adminsController extends CrudController{
 
 			$this->grid = \DataGrid::source($this->filter);
 			$this->grid->add('id', 'id');
-			$this->grid->add('first_name', 'first_name');
+			$this->grid->add('first_name', 'Nome');
 			$this->grid->add('email', 'Email');
 			$this->grid->add('created_at', 'Criado em:');
 			$this->grid->add('updated_at', 'Atualizado em:');
