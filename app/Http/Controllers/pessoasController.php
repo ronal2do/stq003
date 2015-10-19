@@ -17,6 +17,8 @@ class pessoasController extends CrudController{
 
 			$this->filter = \DataFilter::source(new \App\Pessoas);
 			$this->filter->add('nome', 'Nome', 'text');
+			$this->filter->add('id_grupo', 'Grupo', 'text');
+			$this->filter->add('id_programa', 'Programa', 'text');
 			$this->filter->submit('buscar');
 			$this->filter->reset('resetar');
 			$this->filter->build();
@@ -24,19 +26,13 @@ class pessoasController extends CrudController{
 			$this->grid = \DataGrid::source($this->filter);
 			$this->grid->add('nome', 'Nome');
 			$this->grid->add('sexo', 'Sexo');
-			$this->grid->add('created_at', 'Cadastrada em');
-			$this->grid->add('updated_at', 'Alterada em');
-			$this->grid->add('nascimento', 'Nascimento');
 			$this->grid->add('responsavel', 'Responsável');
 			$this->grid->add('email', 'Email');
 			$this->grid->add('tel-fixo', 'Telefone Fixo');
-			$this->grid->add('tel-celular', 'Telefone Celular');
 			$this->grid->add('rua', 'Logradouro');
 			$this->grid->add('numero', 'Numero');
 			$this->grid->add('complemento', 'Complemento');
 			$this->grid->add('bairro', 'bairro');
-			$this->grid->add('cidade', 'cidade');
-			$this->grid->add('estado', 'estado');
 			$this->grid->add('id_grupo', 'Grupo');
 			$this->grid->add('id_programa', 'Programa');
 			$this->addStylesToGrid();
