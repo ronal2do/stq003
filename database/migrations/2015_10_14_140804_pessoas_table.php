@@ -15,7 +15,7 @@ class PessoasTable extends Migration
          Schema::create('pessoas', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
-            $table->string('nome');
+            $table->string('nome')->unique();
             $table->string('sexo');
             $table->string('nascimento');
             $table->string('responsavel');
