@@ -17,6 +17,7 @@ class programasController extends CrudController{
 
 			$this->filter = \DataFilter::source(new \App\Programas);
 			$this->filter->add('nome', 'Nome', 'text');
+			$this->filter->add('id', 'id', 'text');
 			$this->filter->submit('buscar');
 			$this->filter->reset('resetar');
 			$this->filter->build();
