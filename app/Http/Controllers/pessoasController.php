@@ -26,6 +26,7 @@ class pessoasController extends CrudController{
 			$this->grid = \DataGrid::source($this->filter);
 			$this->grid->add('nome', 'Nome');
 			$this->grid->add('sexo', 'Sexo');
+			$this->grid->add('nascimento', 'nascimento');
 			$this->grid->add('responsavel', 'Responsável');
 			$this->grid->add('email', 'Email');
 			$this->grid->add('tel-fixo', 'Telefone Fixo');
