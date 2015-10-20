@@ -31,7 +31,6 @@ class pessoasController extends CrudController{
 			$this->grid->add('tel-fixo', 'Telefone Fixo');
 			$this->grid->add('rua', 'Logradouro');
 			$this->grid->add('numero', 'Numero');
-			$this->grid->add('complemento', 'Complemento');
 			$this->grid->add('bairro', 'bairro');
 			$this->grid->add('id_grupo', 'Grupo');
 			$this->grid->add('id_programa', 'Programa');

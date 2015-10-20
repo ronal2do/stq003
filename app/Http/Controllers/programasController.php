@@ -22,6 +22,7 @@ class programasController extends CrudController{
 			$this->filter->build();
 
 			$this->grid = \DataGrid::source($this->filter);
+			$this->grid->add('id', 'id');
 			$this->grid->add('nome', 'Nome');
 			$this->addStylesToGrid();
     
