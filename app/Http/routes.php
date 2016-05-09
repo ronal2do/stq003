@@ -15,12 +15,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('api/pessoas', function()
+Route::get('/api/pessoas', function()
 {
     return \Response::json(\App\Pessoas::get());
 }]);
 
-Route::get('api/emails', ['middleware' => 'cors', function()
+Route::get('/api/emails', function()
 {
     return \Response::json(\App\Pessoas::count()->where('email','!=' '-'));
 }]);
